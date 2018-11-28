@@ -3,11 +3,11 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+             Aaron Wilkin, their colleagues, and Shengjun Guan.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -28,7 +28,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 3a.  Define a function immediately below this _TODO_.
+# DONE: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -36,11 +36,15 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+def main(a,b):
+    return(((a**2)+(b**2))**(1/2))
 
+
+print(main(3,4))
 
 ###############################################################################
 # TODO: 4a.  Define a function immediately below this _TODO_.
@@ -59,22 +63,32 @@ def main():
 #        Likewise, the "GIVEN" thickness means the PARAMETER for thickness.
 #
 #     c. Makes the first (green) SimpleTurtle move FORWARD 100 pixels, and
-#        makes the other (thickness 5) SimpleTurtle move BACKWARD 100 pixels.
+# #        makes the other (thickness 5) SimpleTurtle move BACKWARD 100 pixels.
 #
 #     d. Tells the TurtleWindow to wait until the mouse is clicked.
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 
 # NEW: call the function once, comment it out, then call it again with different values.
 
 ###############################################################################
+window = rg.TurtleWindow()
+samuel = rg.SimpleTurtle()
+james = rg.SimpleTurtle()
+samuel.pen = rg.Pen('green',2)
+james.pen = rg.Pen('red',5)
+samuel.forward(100)
+james.backward(100)
+window.close_on_mouse_click()
 
+print(main(5,12))
+print(main(3,4))
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
@@ -98,4 +112,4 @@ def main():
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
-main()
+main(5,12)
