@@ -182,17 +182,17 @@ def try_methods_and_functions():
     samuel.pen = rg.Pen('blue', 5)
     samuel.backward(150)
     samuel.speed = 1
-    for k in range(2):
+    for k in range(1,3):
         samuel.draw_square(100)
         samuel.left(30)
     samuel.speed = 5
     samuel.pen = rg.Pen('red', 5)
-    for k in range(10):
+    for k in range(1,11):
         samuel.draw_square(50)
         samuel.left(15)
     samuel.speed= 100
     samuel.pen = rg.Pen('red', 35)
-    for k in range(8):
+    for k in range(1,9):
         samuel.draw_square(300)
         samuel.left(60)
     samuel.pen = rg.Pen('black', 3)
